@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday My Love 💕</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Landing Page -->
+    <div id="landing" class="page active">
+        <div class="landing-content">
+            <div class="hearts-container" id="heartsContainer"></div>
+            <div class="glow-circle"></div>
+            <h1 class="title">Happy Birthday</h1>
+            <h2 class="subtitle">My Forever Love</h2>
+            <div class="qr-section">
+                <div id="qrcode"></div>
+                <p class="qr-text">Scan untuk membuka kejutan spesialmu ✨</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Page (Private) -->
+    <div id="mainPage" class="page">
+        <!-- Background Hearts -->
+        <canvas id="heartCanvas"></canvas>
+        
+        <!-- Music Control -->
+        <div class="music-control">
+            <button id="musicToggle" class="music-btn">
+                <i class="fas fa-play"></i>
+            </button>
+        </div>
+
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="nav-item active" data-page="home">🏠 Home</div>
+            <div class="nav-item" data-page="gallery">💕 Kenangan</div>
+            <div class="nav-item" data-page="timeline">💍 Perjalanan</div>
+            <div class="nav-item" data-page="letter">💌 Surat Cinta</div>
+        </nav>
+
+        <!-- Home Section -->
+        <section id="home" class="page-content active">
+            <div class="birthday-card">
+                <div class="typing-container">
+                    <h1>Selamat Ulang Tahun, Sayangku!</h1>
+                    <div class="typing-text" id="typingText"></div>
+                </div>
+                <div class="countdown-container">
+                    <h3>Sampai Anniversary Kita Berikutnya</h3>
+                    <div class="countdown" id="countdown"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="page-content">
+            <h2 class="section-title">Kenangan Manis Kita 💕</h2>
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Photos will be loaded by JS -->
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section id="timeline" class="page-content">
+            <h2 class="section-title">Perjalanan Cinta Kita 💍</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">15 Feb 2022</div>
+                    <div class="timeline-content">
+                        <i class="fas fa-heart"></i>
+                        <h4>Pertemuan Pertama</h4>
+                        <p>Kopi di kafe kecil, senyummu membuat hatiku bergetar</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">1 Mei 2022</div>
+                    <div class="timeline-content">
+                        <i class="fas fa-ring"></i>
+                        <h4>Resmi Pacaran</h4>
+                        <p>"Mau jadi pacarku?" - Hari terbaik dalam hidupku</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">14 Agustus 2023</div>
+                    <div class="timeline-content">
+                        <i class="fas fa-star"></i>
+                        <h4>Liburan Pertama</h4>
+                        <p>Bali bersama, sunset paling romantis</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Letter Section -->
+        <section id="letter" class="page-content">
+            <div class="envelope-container">
+                <div class="envelope" id="envelope">
+                    <div class="envelope-front">
+                        <div class="envelope-flap"></div>
+                        <p>To: Cintaku</p>
+                    </div>
+                    <div class="envelope-back"></div>
+                    <div class="letter" id="letterContent">
+                        <p>Dear Sayangku,</p>
+                        <br>
+                        <p>Hari ini adalah hari spesialmu, hari dimana dunia menjadi lebih indah 1 tahun yang lalu. Setiap detik bersamamu adalah kebahagiaan tersendiri.</p>
+                        <br>
+                        <p>Dari senyummu yang manis, pelukan hangatmu, sampai candaan kecil kita setiap hari... semua itu membuatku jatuh cinta lagi dan lagi.</p>
+                        <br>
+                        <p>Terima kasih sudah menjadi bagian dari hidupku. Aku berjanji akan selalu mencintaimu, menjagamu, dan membuatmu tersenyum setiap hari.</p>
+                        <br>
+                        <p>Happy Birthday My Love! 💕</p>
+                        <p>Forever yours,</p>
+                        <p><strong>Kamu yang selalu merindukanmu ❤️</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav">
+        <!-- Ganti dengan link lagu romantis Anda -->
+    </audio>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
